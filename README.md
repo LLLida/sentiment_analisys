@@ -1,7 +1,7 @@
 ## Описание решения
 
- - Для классификации использовался [https://github.com/velupanov/bert_rus_sentiment](sismetanin/rubert-ru-sentiment)
- - Для вебсервиса использовался фрэймворк [https://flask.palletsprojects.com/en/3.0.x/](Flask)
+ - Для классификации использовался [sismetanin/rubert-ru-sentiment](https://github.com/velupanov/bert_rus_sentiment)
+ - Для вебсервиса использовался фрэймворк [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 
 ## Запуск
 
