@@ -1,18 +1,18 @@
 name: publish
 on: [push]
 jobs:
-  publish-sentiment-analysis-image:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        - name: Login to GitHub Container Registry
-          uses: docker/login-action@v1
-          with:
-            registry: ghcr.io
-            username: ${{ github.actor }}
-            password: ${{ secrets.GH_TOKEN }}
-            - name: Build the sentiment-analysis Docker image
-              run: |
-                docker build . --tag ghcr.io/deselikem/sentiment-analysis-gcr-demo:latest
-                docker run ghcr.io/deselikem/sentiment-analysis-gcr-demo:latest
-                docker push ghcr.io/deselikem/sentiment-analysis-gcr-demo:latest
+publish-hello-docker-image:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v2
+- name: Login to GitHub Container Registry
+uses: docker/login-action@v1
+with:
+registry: ghcr.io
+username: ${{ github.actor }}
+password: ${{ secrets.GH_TOKEN }}
+- name: Build the hello-docker Docker image
+run: |
+       docker build . --tag ghcr.io/deselikem/hello-docker-gcr-demo:latest
+       docker run ghcr.io/deselikem/hello-docker-gcr-demo:latest
+       docker push ghcr.io/deselikem/hello-docker-gcr-demo:latest
