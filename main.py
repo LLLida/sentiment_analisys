@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from transformers import pipeline
 
+print('Starting...')
+
 app = Flask(__name__)
 
 classifier = pipeline("text-classification", model="sismetanin/rubert-ru-sentiment-rusentiment")
@@ -33,4 +35,4 @@ def predict():
 def home():
     return render_template('index.html')
 
-app.run(debug=True)
+app.run(debug=True, host='0.0.0.0')
