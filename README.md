@@ -20,4 +20,9 @@ python main.py
 
 ### С docker-ом
 
-TODO
+```bash
+docker pull ghcr.io/lllida/sentiment_analisys:main
+docker run -p 5000:5000 --name adil-sentiment-analysis sentiment_analisys:main
+```
+
+Далее заходим на [localhost:5000](localhost:5000).
